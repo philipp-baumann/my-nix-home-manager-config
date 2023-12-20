@@ -1,0 +1,154 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1701680307,
+        "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "4022d587cbbfd70fe950c1e2083a02621806a725",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1656065134,
+        "narHash": "sha256-oc6E6ByIw3oJaIyc67maaFcnjYOz1mMcOtHxbEf9NwQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "bee6a7250dd1b01844a2de7e02e4df7d8a0a206c",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1703026685,
+        "narHash": "sha256-AkualfMbc40HkDR2AZc6u71pcap50wDQOXFCY1ULDUA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "efc177c15f2a8bb063aeb250fe3c7c21e1de265e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1702938738,
+        "narHash": "sha256-O7Vb0xC9s4Dmgxj8APEpuuMj7HsLgPbpy1UKvNVJp7o=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "dd8e82f3b4017b8faa52c2b1897a38d53c3c26cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "r-radian": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "radian": "radian",
+        "rchitect": "rchitect"
+      },
+      "locked": {
+        "lastModified": 1656362099,
+        "narHash": "sha256-uD1wP4cPRurX4FiKjjDq2kDuNlgb4TWgQItfEnQfIT8=",
+        "owner": "swt30",
+        "repo": "radian-flake",
+        "rev": "6f6715a126a4ed730c055248aaf579b18e117f75",
+        "type": "github"
+      },
+      "original": {
+        "owner": "swt30",
+        "repo": "radian-flake",
+        "type": "github"
+      }
+    },
+    "radian": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652992299,
+        "narHash": "sha256-O4C8AL9PercScmF3iP+usPNDyTsTT3ObgdNk5i3DJEo=",
+        "owner": "randy3k",
+        "repo": "radian",
+        "rev": "a07d389b9b41d0c662dd159f7ecbed315c77b20f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "randy3k",
+        "ref": "v0.6.3",
+        "repo": "radian",
+        "type": "github"
+      }
+    },
+    "rchitect": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645768136,
+        "narHash": "sha256-siCl+SlWo0xapxT3LKycNBHdiI+LlS6yMqUnFvilIwk=",
+        "owner": "randy3k",
+        "repo": "rchitect",
+        "rev": "7227be4172f30aa51317e935b25a7e6c6cddf0e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "randy3k",
+        "ref": "v0.3.36",
+        "repo": "rchitect",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs",
+        "r-radian": "r-radian"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
