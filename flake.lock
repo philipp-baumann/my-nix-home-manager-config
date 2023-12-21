@@ -1,5 +1,23 @@
 {
   "nodes": {
+    "catppuccin-vsc": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1702361774,
+        "narHash": "sha256-7hvwhbOQ+2LMt1HH7JJfyejYtdY4wqOvm3yrzCMb4eY=",
+        "owner": "catppuccin",
+        "repo": "vscode",
+        "rev": "3cb3529c5c22ea47203f5e0e6e357b6b2623cfce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "vscode",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -53,6 +71,22 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1701718080,
+        "narHash": "sha256-6ovz0pG76dE0P170pmmZex1wWcQoeiomUZGggfH9XPs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2c7f3c0fb7c08a0814627611d9d7d45ab6d75335",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1702938738,
         "narHash": "sha256-O7Vb0xC9s4Dmgxj8APEpuuMj7HsLgPbpy1UKvNVJp7o=",
@@ -127,9 +161,10 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-vsc": "catppuccin-vsc",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "r-radian": "r-radian"
       }
     },

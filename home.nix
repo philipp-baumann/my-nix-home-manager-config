@@ -27,10 +27,13 @@
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      dracula-theme.theme-dracula
+      # dracula-theme.theme-dracula
       bbenoist.nix
+      catppuccin.catppuccin-vsc
     ];
   };
+
+  fonts.fontconfig.enable = true;
   
   home.packages = with pkgs; [
     btop   
@@ -43,6 +46,7 @@
     micro
     openssh
     neovim
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }
 

@@ -31,5 +31,10 @@ in {
     enableAutosuggestions = true;
     enableCompletion = true;
     history.extended = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "thefuck" ];
+      theme = "af-magic";
+    };
   };
 }

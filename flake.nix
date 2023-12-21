@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = "github:numtide/flake-utils";
+    catppuccin-vsc.url = "github:catppuccin/vscode";
     r-radian = {
       url = "github:swt30/radian-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,18 +29,19 @@
               home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [ ./home.nix ];
+                # pkgs.overlays = [ catppuccin-vsc.overlays.default ];
               };
           };
-          devShell = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              R
-              radian
-              # here you can also include other R packages you need, like:
-              # rPackages.tidyverse
-              # rPackages.DBI
-              # rPackages.shiny
-        ];
-      };
+          # devShell = pkgs.mkShell {
+          #   buildInputs = with pkgs; [
+          #     R
+          #     radian
+          # here you can also include other R packages you need, like:
+          #     rPackages.tidyverse
+          # rPackages.DBI
+          # rPackages.shiny
+        # ];
+      # };
         }
       );
 }
