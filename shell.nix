@@ -22,6 +22,10 @@ let
     nix-ldd = "nix-shell -p stdenv.cc --pure --run 'clang++ -fuse-ld=lld /dev/null'";
     
     nixloc = "nix-build -E 'with import <nixpkgs> {}; callPackage ./default.nix {}'"; 
+    
+    nixreview-head = "nix-shell -p nixpkgs-review --run 'nixpkgs-review rev HEAD'";
+   
+    nixreview-pr = "nix-shell -p nixpkgs-review --run 'nixpkgs-review pr --print-result'"; 
   };
 in {
   # zsh settings
@@ -34,7 +38,7 @@ in {
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "af-magic";
+      theme = "edvardm";
     };
   };
 }
