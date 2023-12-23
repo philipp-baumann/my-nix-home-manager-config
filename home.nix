@@ -37,7 +37,8 @@
   
   home.packages = with pkgs; [
     btop   
-    htop   
+    htop
+    docker   
     zip    
     unzip  
     ripgrep
