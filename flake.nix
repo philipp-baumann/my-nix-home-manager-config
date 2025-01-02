@@ -37,7 +37,7 @@
           #     R
           #     radian
           # here you can also include other R packages you need, like:
-          #     rPackages.tidyverse
+          #     rPackages.tidyverse covr
           # rPackages.DBI
           # rPackages.shiny
         # ];

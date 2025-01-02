@@ -3,6 +3,8 @@
 { config, lib, pkgs, ... }:
 
 let
+  cockpit_cmd = "ssh " + builtins.readFile ./.cockpit-login;
+  mount_cockpit_cmd = builtins.readFile ./.cockpit-mount;
   shellAliases = {
     ll = "ls -la";
 
@@ -25,20 +27,25 @@ let
     
     nixreview-head = "nix-shell -p nixpkgs-review --run 'nixpkgs-review rev HEAD'";
    
-    nixreview-pr = "nix-shell -p nixpkgs-review --run 'nixpkgs-review pr --print-result'"; 
+    nixreview-pr = "nix-shell -p nixpkgs-review --run 'nixpkgs-review pr --print-result'";
+
+    cockpit = cockpit_cmd;
+
+    mount_cockpit = mount_cockpit_cmd;
   };
 in {
   # zsh settings
   programs.zsh = {
     inherit shellAliases;
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     history.extended = true;
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      theme = "edvardm";
+      custom = "$HOME/.oh-my-custom";
+      theme = "spaceship"; # edvardm
     };
   };
 }
