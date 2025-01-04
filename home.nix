@@ -43,7 +43,6 @@ in
   # import other nix files
   imports = [
     ./shell.nix
-    # ./R.nix
   ];
 
   # basic configuration of git
