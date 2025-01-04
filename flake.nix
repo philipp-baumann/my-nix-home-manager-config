@@ -18,30 +18,34 @@
   outputs = { nixpkgs, home-manager, flake-utils, r-radian, ... }:
     flake-utils.lib.eachDefaultSystem
       (system:
-        let 
-          username = "philipp";
+        let
           pkgs = nixpkgs.legacyPackages.${system};
-          radian = r-radian.packages.${system}.radian;
         in {
           # https://github.com/nix-community/home-manager/issues/3075#issuecomment-1593969080
           packages = {
-            homeConfigurations.${username} =
+            homeConfigurations."philipp-${system}" =
               home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                modules = [ ./home.nix ];
-                # pkgs.overlays = [ catppuccin-vsc.overlays.default ];
+                modules = [
+                  ./home.nix
+                  {
+                     home.username = "philipp";
+                     home.homeDirectory = "/Users/philipp";
+                  }
+                ];
+              };
+            homeConfigurations."spectral-cockpit-${system}" =
+              home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
+                modules = [
+                  ./home.nix
+                  {
+                     home.username = "spectral-cockpit";
+                     home.homeDirectory = "/home/spectral-cockpit";
+                  }
+                ];
               };
           };
-          # devShell = pkgs.mkShell {
-          #   buildInputs = with pkgs; [
-          #     R
-          #     radian
-          # here you can also include other R packages you need, like:
-          #     rPackages.tidyverse covr
-          # rPackages.DBI
-          # rPackages.shiny
-        # ];
-      # };
         }
       );
 }
