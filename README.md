@@ -51,4 +51,6 @@ sources (forgot them all) I recommend reading up more about principles e.g.
 - The hack to combine user and architecture:
   - [NixOS Discourse: "Strategy to use same config at work and home"](https://discourse.nixos.org/t/strategy-to-use-same-config-at-work-and-home/34317/2)
 
+  - [Related GitHub issue: "Flakes: per-system configuration"](https://github.com/nix-community/home-manager/issues/3075)
+
 - [Brandon Fulljames : "A practical guide to getting started with home manager with flakes and all that 2024 goodness"](https://github.com/evertras/simple-homemanager)
