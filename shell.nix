@@ -3,7 +3,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  cockpit_cmd = "ssh " + builtins.readFile ./.cockpit-login;
+  cockpit_cmd = "ssh " + builtins.readFile .cockpit-login;
   mount_cockpit_cmd = builtins.readFile ./.cockpit-mount;
   shellAliases = {
     ll = "ls -la";
