@@ -35,4 +35,20 @@ home-manager switch
 # Caveats
 
 There is currently limits to how to to make a `home-manager` configuration
-system-agnostic
+system-agnostic. I followed a hack to use attributes in `homeConfigurations`
+and a selector `#<username>-<arch>` to select from this list.
+
+E.g 
+```sh
+home-manager switch .#philipp-aarch64-darwin
+```
+
+This is explained a bit better here: https://github.com/Evertras/simple-homemanager/blob/main/05-explain-outputs-body.md
+
+Since all here is set up custom, opinionated, and inspired by various 
+sources (forgot them all) I recommend reading up more about principles e.g. 
+
+- The hack to combine user and architecture:
+  - [NixOS Discourse: "Strategy to use same config at work and home"](https://discourse.nixos.org/t/strategy-to-use-same-config-at-work-and-home/34317/2)
+
+- [Brandon Fulljames : "A practical guide to getting started with home manager with flakes and all that 2024 goodness"](https://github.com/evertras/simple-homemanager)
