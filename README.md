@@ -20,11 +20,17 @@ I currently use it to take care of:
   home-manager switch .#philipp-aarch64-darwin
   ```
 
-- then with small adjustments a small homelab server running Rocky linux 8.10
+- then with small adjustments a small homelab server running Rocky linux 8.10:
 
-
+  ```sh
+  home-manager switch --flake .#spectral-cockpit-x86_64-linux
+  ```
 
 # Update software and activate configuration
+
+```sh
+git clone Flakes: per-system configuration
+```
 
 ```sh
 cd ~/.config/home-manager
@@ -40,10 +46,12 @@ and a selector `#<username>-<arch>` to select from this list.
 
 E.g 
 ```sh
-home-manager switch .#philipp-aarch64-darwin
+home-manager switch --flake .#philipp-aarch64-darwin
 ```
 
 This is explained a bit better here: https://github.com/Evertras/simple-homemanager/blob/main/05-explain-outputs-body.md
+
+This is sort of a single flake setup 
 
 Since all here is set up custom, opinionated, and inspired by various 
 sources (forgot them all) I recommend reading up more about principles e.g. 
