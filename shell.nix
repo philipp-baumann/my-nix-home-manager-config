@@ -44,7 +44,7 @@ in {
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "thefuck" ];
-      custom = "$HOME/.oh-my-custom";
+      # custom = "$HOME/.oh-my-custom";
       theme = "spaceship"; # edvardm
     };
   };
