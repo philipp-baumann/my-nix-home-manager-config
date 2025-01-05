@@ -38,7 +38,7 @@
               home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 modules = [
-                  ./home.nix
+                  ./home-spectral-cockpit.nix
                   {
                      home.username = "spectral-cockpit";
                      home.homeDirectory = "/home/spectral-cockpit";
